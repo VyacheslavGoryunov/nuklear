@@ -75,7 +75,7 @@ func NkPlatformNewFrame() {
 	win := state.win
 	ctx := state.ctx
 	state.width, state.height = win.GetSize()
-	state.display_width, state.display_height = win.GetSize()
+	state.display_width, state.display_height = win.GLGetDrawableSize()
 	state.fbScaleX = float32(state.display_width) / float32(state.width)
 	state.fbScaleY = float32(state.display_height) / float32(state.height)
 
